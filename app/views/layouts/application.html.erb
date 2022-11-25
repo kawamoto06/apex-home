@@ -5,7 +5,9 @@
     <title>ApexHome</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&family=Rampart+One&family=Roboto:ital,wght@1,300;1,400&family=Rubik+Distressed&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
@@ -19,19 +21,27 @@
             <%= link_to "APEX HOME", root_path, class: :logo %>
           </div>
           <%# ログインしているときは以下を表示するようにしましょう %>
-          
-            <div class="nav__right">
-              <%= link_to "ログアウト", root_path, method: :delete, class: :nav__logout %>
-              <%= link_to "New Proto", root_path, class: :nav__btn %>
-            </div>
+          <%# if user_signed_in? %>
+            <%#<div class="nav__right"> 
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+             <%# <%= link_to "New Proto", new_prototype_path, class: :nav__btn %>
+            <%#</div>
           <%# // ログインしているときは上記を表示するようにしましょう %>
           <%# ログインしていないときは以下を表示するようにしましょう %>
-        
+          <%# else %>
+            <div class="nav__right">
+              <%= link_to "ログイン", root_path, class: :nav__btn %>
+              <%= link_to "新規登録", root_path, class: :nav__btn %>
+            </div>
+          <%# end %>
           <%# // ログインしていないときは上記を表示するようにしましょう %>
         </div>
       </div>
     </header> 
     <%= yield %>
+    <footer class="footer">
+      <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
+    </footer>
   </body>
 
 </html>

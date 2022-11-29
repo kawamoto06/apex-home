@@ -10,7 +10,7 @@
 | age                | integer | null: false |
 | gender_id          | integer | null: false |
 | rank_id            | integer | null: false |
-| content            | text    | null: false |
+| content            | text    |             |
 
 ### Association
 

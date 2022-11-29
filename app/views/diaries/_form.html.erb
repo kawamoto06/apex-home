@@ -1,0 +1,21 @@
+<%= form_with model: @diary, local: true do |f|%>
+  <div class="field">
+    <%= f.label :title, "題名" %><br />
+    <%= f.text_field :title, id:"diary_title" %>
+  </div>
+
+  <div class="field2">
+    <%= f.label :catch_copy, "日記を書く" %><br />
+    <%= f.text_area :catch_copy, class: :form__text, id:"diary_copy" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :image, "サムネイル" %><br />
+    <%= f.file_field :image, id:"prototype_image" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>

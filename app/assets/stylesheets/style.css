@@ -129,6 +129,7 @@ a {
   font-size: 12px;
   font-weight: bold;
 }
+
 /* メイン */
 .main{height: 800px;
 }
@@ -348,7 +349,7 @@ a {
 }
 .table{
   border-collapse: collapse;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   width: 50%;
 }
 .table__col1{
@@ -366,6 +367,21 @@ a {
   border-collapse: collapse;
   width: 70%;
   padding: 16px 8px;
+}
+.item-red-btn {
+  text-align: center;
+  background-color: lightskyblue;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin: 100px 0px;
+  padding: 1vh 10vw;
+}
+
+.heading{
+  font-size: 30px;
+  margin-bottom: 28px;
+  margin-top: 30px;
 }
 .user__card {
   display: flex;

@@ -17,8 +17,23 @@
     <div class="botton">
       <div class="diary_text">新着日記
       </div>
-      <div class="diary">
-      </div>
+      <ul class="diary">
+        <% @diaries.each do |diary| %>
+          <li class='list'>
+
+            <%= link_to diary_path(diary.id) do %>
+            <div class='diary-img-content'>
+            </div>
+            <div class='diary-info'>
+              <h3 class='diary-name'>
+                <%= diary.title %>
+              </h3>
+                
+            </div>
+            <% end %>
+          </li>
+      <% end %>
+      </ul>
     </div>
   </div>
 </div>

@@ -1,9 +1,10 @@
-<div class="main">
+<div class="user_main">
   <div class="inner">
     <div class="user__wrapper">
       <h2 class="page-heading">
         <%= @user.nickname %>
       </h2>
+      <%= image_tag @user.user_profile_or_empty, class: 'user-image' %>
       <table class="table">
         <tbody>
           <tr>
@@ -33,11 +34,11 @@
       <%= link_to "プロフィールの編集", edit_user_path(current_user), method: :get, class: "item-red-btn" %>
       <% end %>
        <h2 class="heading">
-        <%= @user.nickname + "さんの日記"%>
+        Diaries
       </h2>
-      <div class="user__card">
+      <div class="diary">
         <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
-        
+        <%= render partial: 'diaries/diary', collection: @diaries %>
       </div>
     </div>
   </div>

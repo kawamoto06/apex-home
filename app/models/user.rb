@@ -12,5 +12,13 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true
 
+  def user_profile_or_empty
+    if self.image.attached? == false
+    return "no_image.png"
+    else
+    return image
+    end
+  end
+
 
 end

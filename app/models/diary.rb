@@ -1,4 +1,15 @@
 class Diary < ApplicationRecord
   belongs_to :user
   has_one_attached :image
+
+  validates :title, presence: true
+  validates :text, presence: true
+
+  def diary_profile_or_empty
+    if self.image.attached? == false
+    return "no_image.png"
+    else
+    return image
+    end
+  end
 end

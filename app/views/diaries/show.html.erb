@@ -1,0 +1,35 @@
+<main class="diary_main">
+  <div class="inner">
+    <div class="prototype__wrapper">
+      <div class="prototype__hedding">
+        <div class="diary_title">
+        <%= @diary.title%>
+        </div>
+        <div class="diary_image_box">
+        <%= image_tag @diary.diary_profile_or_empty, class: "diary__image"%>
+        </div>
+        <div class="diary__text">
+        <%= simple_format(@diary.text)%>
+        <p style="white-space:pre-wrap;"></p>
+        </div>
+      </div>
+
+
+      <%= link_to "by #{@diary.user.nickname}", "/users/#{@diary.user.id}", class: :prototype__user %>
+      <% if user_signed_in? && current_user.id == @diary.user_id %>
+        <div class="prototype__manage">
+          <%= link_to "編集する", edit_diary_path(@diary.id), class: :prototype__btn %>
+          <%= link_to "削除する", diary_path(@diary.id), method: :delete, class: :prototype__btn %>
+        </div>
+      <% end %>
+      
+        
+      
+   
+      <div class="prototype__comments">
+       
+        <%# // ログインしているユーザーには上記を表示する %>
+      </div>
+    </div>
+  </div>
+</main>

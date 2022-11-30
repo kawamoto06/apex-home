@@ -7,11 +7,10 @@ before_action :set_user, only: [:show, :edit, :update]
   end
 
   def show
+    @diaries = @user.diaries.order('created_at DESC')
   end
 
   def edit
-      # 編集するユーザーが本人じゃない場合はユーザーページにリダイレクトする
-      # これをしないと、ログインさえしていれば、"/users/5/edit"みたいな適当なurlにアクセスすると、他の人のプロフィール編集画面を表示できてしまう
     unless @user == current_user
     redirect_to user_path(@user)
     end
@@ -26,6 +25,8 @@ before_action :set_user, only: [:show, :edit, :update]
     end
   end
 
+
+
   private
 
   def set_user
@@ -33,7 +34,7 @@ before_action :set_user, only: [:show, :edit, :update]
   end
 
   def user_params
-     params.require(:user).permit(:nickname, :age, :gender_id, :rank_id, :content)
+     params.require(:user).permit(:nickname, :age, :gender_id, :rank_id, :content, :image)
   end
 end
 

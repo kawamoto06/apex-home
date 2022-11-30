@@ -16,8 +16,8 @@
 
 - has_many :diaries
 - has_many :diary_comments
-- has_many :rooms
-- has_many :rooms_comments
+- has_many :topics
+- has_many :topic_comments
 - belongs_to_active_hash :gender
 - belongs_to_active_hash :rank
 
@@ -48,23 +48,23 @@
 - belongs_to :user
 - belongs_to :diary
 
-## rooms テーブル
+## topics テーブル
 
-| Column     |     Type       | Options                        |
-| ---------- | ---------- | ------------------------------ |
-| title      | string     | null: false                    |
-| user       | references | null: false, foreign_key: true |
+| Column      |     Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| name        | string     | null: false                    |
+| user        | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- has_many   :room_comments
+- has_many   :topic_comments
 
-## room_comments テーブル
+## topic_comments テーブル
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| room_comment      | text       | null: false                    |
+| topic_comment     | text       | null: false                    |
 | diary             | references | null: false, foreign_key: true |
 | user              | references | null: false, foreign_key: true |
 

@@ -25,7 +25,8 @@
             <div class="nav__right"> 
              <%= link_to "マイページ", user_path(current_user), class: :nav__btn%>
              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-             <%= link_to "New Proto", new_diary_path, class: :nav__btn %>
+             <%= link_to "New Diary", new_diary_path, class: :nav__btn %>
+             <%= link_to "New Topic", new_topic_path, class: :nav__btn %>
             </div>
   
           <% else %>

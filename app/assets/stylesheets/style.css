@@ -93,6 +93,9 @@ a {
   width: 50%;
   min-height: 430px;
 }
+.form__text2{
+  width: 50%;
+}
 
 .field{
   margin: 10px 0;
@@ -220,15 +223,20 @@ a {
 }
 
 .diary{
-  width: 960px;
+  width: 1000px;
   height: 280px;
   margin-top: 30px;
   background-color: #ffffe5;
   border-radius: 10px ;
   border: 1px black solid;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: left;
   display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding-bottom: 30px;
+  padding-right: 40px;
+  overflow-y: hidden;
 }
 
 .diary-img-content{
@@ -241,10 +249,16 @@ a {
   width: 240px;
   height: 200px;
   margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 40px;
   background-color: #ffffe5;
 }
 
 .diary-name{
+  font-size: 20px;
+  font-weight: 700;
+  
+}
   
 
 

@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
   belongs_to :rank
   belongs_to :gender
+  has_one_attached :image
+  has_many :diaries
 
   validates :nickname, presence: true
 

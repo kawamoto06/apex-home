@@ -9,7 +9,7 @@
           <li class=''>
             <%= link_to topic_path(topic.id) do %>
             <div class='topic'>
-              <div class= topic_block>■
+              <div class= topic_block>
                 
                   <%= topic.name %>
                 
@@ -47,7 +47,7 @@
                 <%= diary.title %>
               </div>
               <% end %>
-              <%= link_to 'by ' + diary.user.nickname, "/users/#{diary.user.id}", class: :card__user %>
+              <%= link_to diary.user.nickname, "/users/#{diary.user.id}", class: :card__user %>
             </div>
             
           </li>

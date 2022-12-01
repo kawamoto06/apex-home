@@ -106,6 +106,9 @@ a {
 .actions{
   margin-bottom: 40px;
 }
+.topic_actions{
+  text-align: center;
+}
 
 .form__btn{
   display: inline-block;
@@ -190,12 +193,16 @@ a {
   overflow: scroll;
 }
 .topic{
+  height: 25px;
   border-bottom: blue 1px solid;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
 }
 .topic_block{
   padding-left: 20px;
+  width: 500px;
+  overflow: hidden;
 }
 .topic_name{
   color: gray;
@@ -354,19 +361,34 @@ a {
 }
 .topic_main{
   min-height: 800px;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 40px;
+  background-color: #f6f6f6;
+}
+.topic_inner{
+  display: flex;
+  justify-content: center;
+}
+.topic__wrapper{
+  width: 900px;
+  max-height: 700px;
+  background-color: #fff;
+  border: #999 1px solid;
+  overflow: scroll;
 }
 
 .topic_name_box{
-  background-color: #fff;
   width: 900px;
+  padding: 10px 10px;
+  border-bottom: #999 2px solid;
 
 }
 .topic_name{
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 600;
   overflow: hidden;
+  color: black;
+
 }
 
 .prototype__detail{
@@ -388,7 +410,7 @@ a {
 
 .topic__manage{
   display: flex;
-  justify-content: left;
+  justify-content: center;
   padding-top: 16px;
 }
 .prototype__manage{
@@ -397,15 +419,10 @@ a {
   padding-top: 16px;
 }
 .topic__btn{
-  display: block;
   padding: 0.4em 1.6em;
   font-size: 0.4em;
   color: #999;
   text-decoration: none;
-  user-select: none;
-  border: 1px #999 solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
   margin: 0 4px;
 }
 
@@ -436,6 +453,8 @@ a {
   padding: 20px;
   margin: 30px 200px 40px 200px;
 }
+.topic__comments{
+}
 .prototype__comments{
   background-color: #f6f6f6;
   padding: 20px;
@@ -443,13 +462,20 @@ a {
 }
 
 
-.comments_lists{
-  padding-left: 20px;
+.topic_comments_list{
+  border-bottom: #999 1px solid;
+  list-style-type: square;
+  padding-bottom: 15px;
+  padding-left: 10px;
 }
 
 .comments_list{
   list-style-type: square;
   padding-bottom: 15px;
+  padding-left: 20px;
+}
+.diary_comment_time{
+  font-size: 10px;
 }
 
 .box{
@@ -464,6 +490,13 @@ a {
   text-decoration: underline;
 }
 
+.form_box{
+}
+
+.topic_comment{
+  display: flex;
+  justify-content: center;
+}
 
 /* ユーザーページ */
 .user_main{

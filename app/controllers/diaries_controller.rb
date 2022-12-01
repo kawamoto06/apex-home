@@ -3,7 +3,7 @@ class DiariesController < ApplicationController
   before_action :ensure_user, only: [:edit]
   def index
     @diaries = Diary.order('created_at DESC')
-    @topics = Topic.order('created_at DESC')
+    @topics = Topic.order('updated_at DESC')
   end
   def new
     @diary = Diary.new

@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :diaries do
     resources :diary_comments, only: :create
   end
-  resources :topics
+  resources :topics do
+    resources :topic_comments, only: :create
+  end
   resources :users, only: [:show, :edit, :update]
   
 end

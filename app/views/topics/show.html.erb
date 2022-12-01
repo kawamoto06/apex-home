@@ -1,22 +1,71 @@
 <main class="topic_main">
-  <div class="inner">
-    <div class="prototype__wrapper">
+  <div class="topic_inner">
+    <div class="topic__wrapper">
       
         <div class="topic_name">
           <div class='topic_name_box'>
-            <%= @topic.name%>
+            ◆ <%= @topic.name%>
           </div>
+        </div>
+
+      <div class="topic__comments">
+        <%# // ログインしているユーザーには上記を表示する %>
+        <div class="comments_lists">
+          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+          <% @topic_comments.each do |comment| %>
+            <div class="topic_comments_list">
+              <div class="user_name">
+                <%= comment.id %>.
+                <%= link_to comment.user.nickname, "/users/#{comment.user.id}", class: :comment_user %>
+              </div>
+              <div class="comments">
+                <%= comment.topic_comment %>
+              </div>
+              <div class="box">
+                  <div class="diary_comment_time">
+                    <%= comment.created_at.strftime("%Y-%m-%d %H:%M:%S")%>
+                  </div>
+                  <div class="prototype__manage">
+                    <% if user_signed_in? && current_user.id == @topic.user_id %>
+                    <%= link_to "編集する", edit_topic_path(@topic.id), class: :prototype__btn %>
+                    <%= link_to "削除する", topic_path(@topic.id), method: :delete, class: :prototype__btn %>
+                    <% end %>
+                  </div>
+              </div>
+            </div>
+            <% end %>
+          <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
+        </div>
+      </div>
+      <div class="form_box">
+        <div class="topic_comment">
+          <% if user_signed_in? %>
+            <%= form_with(model: [@topic, @topic_comment], local: true) do |f|%>
+              <div class="field">
+                <%= f.label :topic_comment, "コメントを投稿する" %><br />
+                <%= f.text_field :topic_comment, id:"comment_content" %>
+              </div>
+              <div class="topic_actions">
+                <%= f.submit "投稿", class: :form__btn  %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+        
+        <div class="topic__manage">
+            <% if user_signed_in? && current_user.id == @topic.user_id %>
+            <%= link_to "編集", edit_topic_path(@topic.id), class: :topic__btn %>
+            <%= link_to "削除", topic_path(@topic.id), method: :delete, class: :topic__btn %>
+            <% end %>
+        </div>
+      </div>
       
       
       
         
       
-    <% if user_signed_in? && current_user.id == @topic.user_id %>
-        <div class="topic__manage">
-          <%= link_to "編集する", edit_topic_path(@topic.id), class: :topic__btn %>
-          <%= link_to "削除する", topic_path(@topic.id), method: :delete, class: :topic__btn %>
-        </div>
-      <% end %>
+    
+        
     </div>
   </div>
 </main>

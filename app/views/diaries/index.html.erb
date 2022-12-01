@@ -1,16 +1,33 @@
 <div class="main">
-  <%= image_tag "apex3.jpeg", class:"image" %>
+  <%= image_tag "apex.jpeg", class:"image" %>
   <div class="main_2">
     <div class="top">
       <div class="chat_text">最新の話題
       </div> 
-      <div class="chat_room">aaaaaa
-      </div>
+      <ul class="chat_room">
+        <% @topics.each do |topic| %>
+          <li class=''>
+            <%= link_to topic_path(topic.id) do %>
+            <div class='topic'>
+              <div class= topic_block>■
+                
+                  <%= topic.name %>
+                
+              </div>
+              
+              <div class='topic_time'>
+                更新日<%= topic.updated_at.strftime("%Y-%m-%d %H:%M:%S") %>
+              </div>
+            </div>
+            <% end %>
+          </li>
+       <% end %>
+      </ul>
     </div>
   </div>
 </div>
 <div class="main_center">
-  <%= image_tag "背景2.jpeg", class:"image2" %>
+  <%= image_tag "背景.jpeg", class:"image2" %>
 </div>
 <div class="main_botton">
   <div class="main_botton2">

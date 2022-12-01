@@ -53,14 +53,14 @@ a {
   width: 200px;
   font-size: 24px;
   font-weight: 200;
-  color: lightpink;
+  color: lightgray;
   font-family: 'Rubik Distressed', cursive;
 }
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: lightpink;
+  color: lightgray;
   text-decoration: none;
   user-select: none;
   border-style: none;
@@ -182,11 +182,29 @@ a {
 
 .chat_room{
   margin-top: 30px;
-  background-color: #ffffe5;
-  width: 360px;
+  background-color: #ffff;
+  width: 730px;
   height: 360px;
   border-radius: 10px ;
   border: 1px black solid;
+  overflow: scroll;
+}
+.topic{
+  border-bottom: blue 1px solid;
+  display: flex;
+  justify-content: space-between;
+}
+.topic_block{
+  padding-left: 20px;
+}
+.topic_name{
+  color: gray;
+  padding-right: 20px;
+  overflow: hidden;
+}
+.topic_time{
+  text-align: right;
+  padding-right: 20px;
 }
 
 .main_center{
@@ -227,7 +245,7 @@ a {
   width: 1210px;
   height: 300px;
   margin-top: 30px;
-  background-color: #ffffe5;
+  background-color: #f6f6f6;
   border-radius: 10px ;
   border: 1px black solid;
   flex-wrap: nowrap;
@@ -294,14 +312,14 @@ a {
 }
 
 .diary_main{
-  background-color: lightyellow;
+  background-color: #f6f6f6;
   padding-top: 40px;
   padding-bottom: 40px;
 }
 .prototype__hedding{
   
   margin: 0 200px 40px 200px;
-  padding: 20px 30px 80px;
+  padding: 20px 30px 20px;
   background-color: #fff;
 }
 .prototype__user{
@@ -312,14 +330,14 @@ a {
   text-decoration: underline;
 }
 .diary_image_box{
+}
+
+.diary__image{
   width: 100%;
   height: 500px;
   margin-top: 30px;
   background-color: #fff;
-}
-.diary__image{
-  width: 100%;
-  height: 100%;
+  border: #3b4043 solid 1px;
 
   object-fit: contain;
 }
@@ -330,9 +348,27 @@ a {
 
 }
 .diary__text{
+  margin-top: 20px;
   line-height: 30px;
  
 }
+.topic_main{
+  min-height: 800px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.topic_name_box{
+  background-color: #fff;
+  width: 900px;
+
+}
+.topic_name{
+  font-size: 24px;
+  font-weight: 400;
+  overflow: hidden;
+}
+
 .prototype__detail{
   display: flex;
   align-items: center;
@@ -344,11 +380,35 @@ a {
   font-weight: bold;
   padding: 40px 0 0 40px;
 }
+.diary__manage{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.topic__manage{
+  display: flex;
+  justify-content: left;
+  padding-top: 16px;
+}
 .prototype__manage{
   display: flex;
   justify-content: center;
   padding-top: 16px;
 }
+.topic__btn{
+  display: block;
+  padding: 0.4em 1.6em;
+  font-size: 0.4em;
+  color: #999;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #999 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 0 4px;
+}
+
 .prototype__btn{
   display: block;
   padding: 0.4em 1.6em;
@@ -367,10 +427,21 @@ a {
 }
 
 .prototype__comments{
+  background-color: #fff;
+  padding: 20px;
+  margin: 28px 0 40px 0;
+}
+.diary__comments{
+  background-color: #fff;
+  padding: 20px;
+  margin: 30px 200px 40px 200px;
+}
+.prototype__comments{
   background-color: #f6f6f6;
   padding: 20px;
   margin: 28px 0 40px 0;
 }
+
 
 .comments_lists{
   padding-left: 20px;
@@ -378,14 +449,21 @@ a {
 
 .comments_list{
   list-style-type: square;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
 }
+
+.box{
+  display: flex;
+  justify-content: space-between;
+}
+
 
 .comment_user{
   font-size: 16px;
   color: #999;
   text-decoration: underline;
 }
+
 
 /* ユーザーページ */
 .user_main{

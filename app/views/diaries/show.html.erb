@@ -1,34 +1,75 @@
 <main class="diary_main">
   <div class="inner">
     <div class="prototype__wrapper">
+     <% if user_signed_in? && current_user.id == @diary.user_id %>
+        <div class="diary__manage">
+          <%= link_to "編集する", edit_diary_path(@diary.id), class: :prototype__btn %>
+          <%= link_to "削除する", diary_path(@diary.id), method: :delete, class: :prototype__btn %>
+        </div>
+      <% end %>
       <div class="prototype__hedding">
+        <%= link_to "by #{@diary.user.nickname}", "/users/#{@diary.user.id}", class: :prototype__user %>
         <div class="diary_title">
         <%= @diary.title%>
         </div>
+        <div class="diary_time">
+        <%= @diary.created_at.strftime("%Y-%m-%d %H:%M:%S")%>
+        </div>
         <div class="diary_image_box">
-        <%= image_tag @diary.diary_profile_or_empty, class: "diary__image"%>
+        <%= image_tag @diary.image, class: "diary__image" if @diary.image.attached? %>
         </div>
         <div class="diary__text">
         <%= simple_format(@diary.text)%>
         <p style="white-space:pre-wrap;"></p>
         </div>
+        
       </div>
 
 
-      <%= link_to "by #{@diary.user.nickname}", "/users/#{@diary.user.id}", class: :prototype__user %>
-      <% if user_signed_in? && current_user.id == @diary.user_id %>
-        <div class="prototype__manage">
-          <%= link_to "編集する", edit_diary_path(@diary.id), class: :prototype__btn %>
-          <%= link_to "削除する", diary_path(@diary.id), method: :delete, class: :prototype__btn %>
-        </div>
-      <% end %>
+      
+     
       
         
       
    
-      <div class="prototype__comments">
-       
+      <div class="diary__comments">
         <%# // ログインしているユーザーには上記を表示する %>
+        <div class="comments_lists">
+          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+          <% @diary_comments.each do |comment| %>
+            <div class="comments_list">
+              <div class="user_name">
+                投稿者<%= link_to comment.user.nickname, "/users/#{comment.user.id}", class: :comment_user %>
+              </div>
+              <div class="comments">
+                <%= comment.diary_comment %>
+              </div>
+              <div class="box">
+                  <div class="diary_comment_time">
+                    <%= comment.created_at.strftime("%Y-%m-%d %H:%M:%S")%>
+                  </div>
+                  <div class="prototype__manage">
+                    <% if user_signed_in? && current_user.id == @diary.user_id %>
+                    <%= link_to "編集する", edit_diary_path(@diary.id), class: :prototype__btn %>
+                    <%= link_to "削除する", diary_path(@diary.id), method: :delete, class: :prototype__btn %>
+                    <% end %>
+                  </div>
+              </div>
+            </div>
+            <% end %>
+          <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
+        </div>
+        <% if user_signed_in? %>
+          <%= form_with(model: [@diary, @diary_comment], local: true) do |f|%>
+            <div class="field">
+              <%= f.label :diary_comment, "コメント" %><br />
+              <%= f.text_field :diary_comment, id:"comment_content" %>
+            </div>
+            <div class="actions">
+              <%= f.submit "送信する", class: :form__btn  %>
+            </div>
+          <% end %>
+          <% end %>
       </div>
     </div>
   </div>

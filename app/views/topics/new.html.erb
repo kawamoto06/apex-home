@@ -1,7 +1,16 @@
 <div class="main">
   <div class="inner">
     <div class="form__wrapper">
-      <h2 class="page-heading">新規投稿</h2>
+      <h2 class="page-heading">トピック作成</h2>
+      <%= form_with model: @topic, local: true do |f|%>
+        <div class="field">
+          <%= f.label :name, "題名" %><br />
+          <%= f.text_field :name, id:"topic_title" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "保存する", class: :form__btn  %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

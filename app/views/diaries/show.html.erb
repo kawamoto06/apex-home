@@ -50,7 +50,6 @@
                   </div>
                   <div class="prototype__manage">
                     <% if user_signed_in? && current_user.id == @diary.user_id %>
-                    <%= link_to "編集する", edit_diary_path(@diary.id), class: :prototype__btn %>
                     <%= link_to "削除する", diary_path(@diary.id), method: :delete, class: :prototype__btn %>
                     <% end %>
                   </div>

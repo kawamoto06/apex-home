@@ -2,8 +2,20 @@
   <%= image_tag "apex.jpeg", class:"image" %>
   <div class="main_2">
     <div class="top">
-      <div class="chat_text">最新の話題
-      </div> 
+     <div class="text_box">
+      <%= image_tag "看板.png", class:"image4" %>
+        <div class="chat_text0">
+        Topic
+        </div> 
+        <div class="chat_text">
+        <%= link_to "トピック一覧", topics_path  %>
+        </div>
+        <div class="chat_text2">
+        ↓最新の話題↓
+        </div> 
+      </div>
+      </div>
+      <div class="top2">
       <ul class="chat_room">
         <% @topics.each do |topic| %>
           <li class=''>
@@ -16,13 +28,14 @@
               </div>
               
               <div class='topic_time'>
-                更新日<%= topic.updated_at.strftime("%Y-%m-%d %H:%M:%S") %>
+                作成日<%= topic.updated_at.strftime("%Y年 %m月 %d日") %>
               </div>
             </div>
             <% end %>
           </li>
        <% end %>
       </ul>
+      </div>
     </div>
   </div>
 </div>

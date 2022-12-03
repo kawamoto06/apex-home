@@ -8,8 +8,6 @@ class DiaryCommentsController < ApplicationController
       @diary_comments = @diary.diary_comments
       render "diaries/show" 
     end
-
-
   end
 
   private

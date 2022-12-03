@@ -161,6 +161,12 @@ a {
   object-fit: cover;
   opacity: 50%;
 }
+.image4{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 90%;
+}
 
 .main_2{
   position: absolute;
@@ -174,23 +180,80 @@ a {
   display: flex;
   align-items: center;
   flex-flow: column;
+  justify-content: center;
+
 }
-.chat_text{
+.top2{
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+}
+.top3{
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+
+}
+
+.text_box{
+  width: 340px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+}
+.chat_text0{
   font-size: 40px;
   text-align: center;
   font-family: 'Rampart One', cursive;
   width: 240px;
   border-radius: 30px;
+  position: absolute;
+  top: 150px;
+
+}
+
+.chat_text{
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Rampart One', cursive;
+  width: 260px;
+  color: #3b4043;
+  position: absolute;
+  top: 220px;
+
+}
+.chat_text3{
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Rampart One', cursive;
+  width: 260px;
+  color: #3b4043;
+
+}
+.chat_text2{
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Rampart One', cursive;
+  width: 240px;
+  border-radius: 30px;
+  position: absolute;
+  top: 290px;
+
 }
 
 .chat_room{
-  margin-top: 30px;
+  margin-top: 5px;
   background-color: #ffff;
   width: 730px;
   height: 360px;
   border-radius: 10px ;
   border: 1px black solid;
   overflow: scroll;
+
 }
 .topic{
   height: 25px;
@@ -322,6 +385,12 @@ a {
   background-color: #f6f6f6;
   padding-top: 40px;
   padding-bottom: 40px;
+}
+.topics_main{
+  background-color: #f6f6f6;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: 800px;
 }
 .prototype__hedding{
   

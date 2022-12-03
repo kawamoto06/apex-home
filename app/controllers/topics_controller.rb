@@ -1,4 +1,8 @@
 class TopicsController < ApplicationController
+  def index
+    @topics = Topic.order('created_at DESC')
+  end
+
   def new
     @topic = Topic.new
   end
@@ -6,7 +10,7 @@ class TopicsController < ApplicationController
   def create
     @topic = Topic.new(topic_params)
     if @topic.save
-      redirect_to root_path
+      redirect_to topics_path
     else
       render :new
     end
@@ -25,14 +29,20 @@ class TopicsController < ApplicationController
   def update
     @topic = Topic.find(params[:id])
     if @topic.update(topic_params)
-      redirect_to topic_path(@topic.id)
+      redirect_to root_path(@topic.id)
     else
       render :edit
     end
   end
 
+  def destroy
+    topic = Topic.find(params[:id])
+    topic.destroy
+    redirect_to root_path
+  end
+
   private
   def topic_params
-    params.require(:topic).permit(:name).merge(user_id: current_user.id,)
+    params.require(:topic).permit(:name, topic_comments_attributes: [:topic_comment, :_destroy, :id]).merge(user_id: current_user.id,)
   end
 end

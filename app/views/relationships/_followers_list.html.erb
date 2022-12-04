@@ -4,7 +4,7 @@
           <div class="tab_box1">
             <div class="tab_top">
               <%= link_to image_tag(user.user_profile_or_empty, class: 'user-image2'), "/users/#{user.id}" %>
-              <div class="tab_box"><%= user.nickname %>
+              <div class="tab_box"><%= link_to user.nickname, "/users/#{user.id}" %>
                 <div class="tab_bot">
                   <div>
                     フォロー: <%= user.followings.count %>

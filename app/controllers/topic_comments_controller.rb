@@ -16,6 +16,17 @@ class TopicCommentsController < ApplicationController
     @topic_comment = TopicComment.find(params[:id])
   end
 
+  def update
+    @topic = Topic.find(params[:topic_id])
+    @topic_comment = TopicComment.find(params[:id])
+    if @topiccomment.update(topic_comment_params)
+      redirect_to topic_path(@topic), notice: "コメントを編集しました"
+    else
+      flash.now[:danger] = "編集に失敗しました"
+      render 'edit'
+    end
+  end
+
     
 
 

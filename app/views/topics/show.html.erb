@@ -41,9 +41,10 @@
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
         </div>
       </div>
+      <% if user_signed_in? %>
       <div class="form_box">
         <div class="topic_comment">
-          <% if user_signed_in? %>
+          
             <%= form_with(model: [@topic, @topic_comment], local: true) do |f|%>
               <div class="field">
                 <%= f.label :topic_comment, "コメントを投稿する" %><br />

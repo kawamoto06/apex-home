@@ -578,10 +578,14 @@ a {
   object-fit: contain;
   border: black 1px solid;
   margin-bottom: 20px;
+  border-radius: 50%;
 }
 
 .user__wrapper{
   min-height: calc(100vh - 161px);
+  display: flex;
+  align-items: center;
+  flex-flow: column;
 }
 .table{
   border-collapse: collapse;

@@ -19,12 +19,19 @@ class TopicCommentsController < ApplicationController
   def update
     @topic = Topic.find(params[:topic_id])
     @topic_comment = TopicComment.find(params[:id])
-    if @topiccomment.update(topic_comment_params)
+    if @topic_comment.update(topic_comment_params)
       redirect_to topic_path(@topic), notice: "コメントを編集しました"
     else
       flash.now[:danger] = "編集に失敗しました"
       render 'edit'
     end
+  end
+
+  def destroy
+    @topic_comment = TopicComment.find(params[:id])
+    @topic_comment.destroy
+    flash[:danger] = "コメントを削除しました"
+    redirect_back(fallback_location: root_path)
   end
 
     

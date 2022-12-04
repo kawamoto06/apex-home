@@ -49,8 +49,11 @@
                     <%= comment.created_at.strftime("%Y-%m-%d %H:%M:%S")%>
                   </div>
                   <div class="prototype__manage">
-                    <% if user_signed_in? && current_user.id == @diary_comment.user_id %>
-                    <%= link_to "削除する", diary_path(@diary.id), method: :delete, class: :prototype__btn %>
+                    <% if user_signed_in? && current_user.id == comment.user_id %>
+                    <%= link_to "編集する", edit_diary_diary_comment_path(@diary, comment), class: :prototype__btn %>
+                    <%= link_to "削除する", diary_diary_comment_path(@diary, comment), method: :delete, class: :prototype__btn %>
+                    <% elsif current_user.id == @diary.user_id then %>
+                    <%= link_to "削除する", diary_diary_comment_path(@diary, comment), method: :delete, class: :prototype__btn %>
                     <% end %>
                   </div>
               </div>

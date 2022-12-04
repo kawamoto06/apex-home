@@ -27,6 +27,8 @@
              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
              <%= link_to "New Diary", new_diary_path, class: :nav__btn %>
              <%= link_to "New Topic", new_topic_path, class: :nav__btn %>
+             <%= link_to "日記一覧", galleries_path, class: :nav__btn %>
+             <%= link_to "トピック一覧", topics_path, class: :nav__btn %>
             </div>
   
           <% else %>

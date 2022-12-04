@@ -1,0 +1,27 @@
+<div class="topics_main">
+    <div class="top3">
+      <div class="chat_text3">トピック一覧
+      </div> 
+      <ul class="chat_room">
+        <% @topics.each do |topic| %>
+          <li class=''>
+            <%= link_to topic_path(topic.id) do %>
+            <div class='topic'>
+              <div class= topic_block>
+                
+                  <%= topic.name %>
+                
+              </div>
+              
+              <div class='topic_time'>
+                作成日<%= topic.updated_at.strftime("%Y年 %m月 %d日") %>
+              </div>
+            </div>
+            <% end %>
+          </li>
+       <% end %>
+      </ul>
+    </div>
+   </div>
+
+</div>

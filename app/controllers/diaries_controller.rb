@@ -3,7 +3,9 @@ class DiariesController < ApplicationController
   before_action :ensure_user, only: [:edit]
   def index
     @diaries = Diary.order('created_at DESC')
-    @topics = Topic.order('created_at DESC')
+    @topics = Topic.includes(:topic_comments).order('topic_comments.created_at' => :desc)
+    @topics = @topics.joins(:topic_comments)
+  
   end
   def new
     @diary = Diary.new

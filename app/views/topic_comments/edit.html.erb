@@ -1,0 +1,13 @@
+<div class="topics_main">
+<div class="topic_comment">
+            <%= form_with(model: [@topic, @topic_comment], local: true) do |f|%>
+              <div class="field">
+                <%= f.label :topic_comment, "コメントを編集する" %><br />
+                <%= f.text_field :topic_comment, id:"comment_content" %>
+              </div>
+              <div class="topic_actions">
+                <%= f.submit "投稿", class: :form__btn  %>
+              </div>
+            <% end %>
+        </div>
+        </div>

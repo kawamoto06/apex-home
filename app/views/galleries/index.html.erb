@@ -1,0 +1,19 @@
+<ul class="diary">
+        <% @diaries.each do |diary| %>
+          <li class='list'>
+
+            <%= link_to diary_path(diary.id) do %>
+            <div class='diary-img-content'>
+            <%= image_tag diary.diary_profile_or_empty, class: 'diary-image' %>
+            </div>
+            <div class='diary-info'>
+              <div class='diary-name'>
+                <%= diary.title %>
+              </div>
+              <% end %>
+              <%= link_to diary.user.nickname, "/users/#{diary.user.id}", class: :card__user %>
+            </div>
+            
+          </li>
+      <% end %>
+      </ul>

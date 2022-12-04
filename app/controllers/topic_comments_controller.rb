@@ -9,10 +9,17 @@ class TopicCommentsController < ApplicationController
       @topic_comments = @topic.topic_comments
       render "topics/show" 
     end
+  end
+  
+  def edit
+    @topic = Topic.find(params[:topic_id])
+    @topic_comment = TopicComment.find(params[:id])
+  end
+
     
 
 
-  end
+
 
   private
   def topic_comment_params

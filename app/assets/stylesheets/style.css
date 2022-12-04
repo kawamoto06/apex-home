@@ -176,7 +176,7 @@ a {
 }
 
 .top{
-  margin-top: 110px;
+  margin-top: 90px;
   display: flex;
   align-items: center;
   flex-flow: column;
@@ -212,7 +212,7 @@ a {
   width: 240px;
   border-radius: 30px;
   position: absolute;
-  top: 150px;
+  top: 130px;
 
 }
 
@@ -223,7 +223,7 @@ a {
   width: 260px;
   color: #3b4043;
   position: absolute;
-  top: 220px;
+  top: 200px;
 
 }
 .chat_text3{
@@ -241,12 +241,12 @@ a {
   width: 240px;
   border-radius: 30px;
   position: absolute;
-  top: 290px;
+  top: 270px;
 
 }
 
 .chat_room{
-  margin-top: 5px;
+  margin-top: 0px;
   background-color: #ffff;
   width: 730px;
   height: 360px;

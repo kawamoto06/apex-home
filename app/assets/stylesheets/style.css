@@ -197,6 +197,14 @@ a {
   justify-content: center;
 
 }
+.top4{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+
+}
 
 .text_box{
   width: 340px;
@@ -327,6 +335,22 @@ a {
   padding-right: 35px;
   overflow-y: hidden;
   margin-bottom: 40px;
+}
+
+.diary2{
+  width: 1000px;
+  height: 800px;
+  margin-top: 30px;
+  background-color: #f6f6f6;
+  border-radius: 10px ;
+  border: 1px black solid;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  padding-top: 50px;
+  padding-right: 35px;
+  margin-bottom: 40px;
+  padding-bottom: 70px;
 }
 
 .diary-img-content{

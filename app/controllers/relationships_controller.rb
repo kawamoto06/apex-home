@@ -18,8 +18,6 @@ class RelationshipsController < ApplicationController
   def followers
     user = User.find(params[:user_id])
     @users = user.followers
-    @users = User.includes(:relationships).order('relationships.created_at' => :desc)
-    @users = @users.joins(:relationships)
   end
 end
 

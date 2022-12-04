@@ -13,4 +13,6 @@ class Diary < ApplicationRecord
     return image
     end
   end
+
+  
 end

@@ -338,7 +338,7 @@ a {
 }
 
 .diary2{
-  width: 1000px;
+  width: 980px;
   height: 800px;
   margin-top: 30px;
   background-color: lightgoldenrodyellow;
@@ -348,7 +348,7 @@ a {
   flex-wrap: wrap;
   overflow: scroll;
   padding-top: 20px;
-  padding-right: 35px;
+  padding-right: 30px;
   margin-bottom: 40px;
   padding-bottom: 70px;
 }

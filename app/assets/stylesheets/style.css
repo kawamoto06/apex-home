@@ -616,16 +616,54 @@ a {
 .user_main{
   
 }
-
+.follow_box{
+  display: flex;
+}
+.follow{
+  margin-right: 20px;
+}
 .user-image{
   height: 300px;
   width: 300px;
   object-fit: contain;
-  border: black 1px solid;
-  margin-bottom: 20px;
+  border: #999 1px solid;
+  margin: 20px 0px;
   border-radius: 50%;
 }
-
+.user-image2{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 20px;
+  
+}
+.table2{
+  width: 400px;
+  height: 800px;
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 10px ;
+  border: 1px black solid;
+  flex-wrap: wrap;
+  overflow: scroll;
+  padding-top: 20px;
+  padding-right: 0px;
+  margin-bottom: 40px;
+  padding-bottom: 70px;
+}
+.tab_box1{
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: #999 1px solid;
+}
+.tab_top{
+  display: flex; 
+  
+}
+.tab_bot{
+  display: flex;
+  margin-left: 0px;
+}
 .user__wrapper{
   min-height: calc(100vh - 161px);
   display: flex;
@@ -633,6 +671,7 @@ a {
   flex-flow: column;
 }
 .table{
+  margin-top: 30px;
   border-collapse: collapse;
   margin-bottom: 40px;
   width: 50%;

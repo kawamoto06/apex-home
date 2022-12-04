@@ -1,0 +1,23 @@
+<ul class="table2">
+<% if @users.exists? %>
+  <% @users.each do |user| %>
+          <div class="tab_box1">
+            <div class="tab_top">
+              <%= link_to image_tag(user.user_profile_or_empty, class: 'user-image2'), "/users/#{user.id}" %>
+              <div class="tab_box"><%= user.nickname %>
+                <div class="tab_bot">
+                  <div>
+                    フォロー: <%= user.followings.count %>
+                  </div>
+                  <div>
+                    フォロワー: <%= user.followers.count %>
+                  </div>
+                </div>  
+              </div>
+            </div>
+          </div>
+  <% end %>
+   </ul>
+<% else %>
+  <p>ユーザーはいません</p>
+<% end %>

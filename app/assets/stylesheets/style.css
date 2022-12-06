@@ -698,6 +698,10 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+
+.follw_text{
+  text-align: center;
+}
 /* フッター */
 
 .footer {

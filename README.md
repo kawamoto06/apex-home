@@ -27,6 +27,17 @@ https://apex-home.onrender.com
 ## 洗い出した要件
 https://docs.google.com/spreadsheets/d/1bzG783Fndeg1mL2MAqGgXcsDOpU_Ie8lYywkHoHvIKA/edit#gid=982722306  
 ## 実装した機能についての説明やGIFおよびその他
+日記一覧は１ページにつき12件表示されてそれ以上は次のページに表示されます。  
+[![Image from Gyazo](https://i.gyazo.com/49ea2f828c11831897b80f017a79f215.gif)](https://gyazo.com/49ea2f828c11831897b80f017a79f215)
+トピック作成するとトピック一覧に推移し、コメントがついたトピックがトップページに表示されます。  
+[![Image from Gyazo](https://i.gyazo.com/db6c399efd7c9ff3c54b9de1214ec53f.gif)](https://gyazo.com/db6c399efd7c9ff3c54b9de1214ec53f)  
+[![Image from Gyazo](https://i.gyazo.com/aa01936251dd29a6ca5ebe80a361e446.gif)](https://gyazo.com/aa01936251dd29a6ca5ebe80a361e446)  
+トピックも日記も表示しきれない件数になるとスクロールで表示されます。（新着日記の表示は10件まで）更にトピックと日記のタイトルが長すぎる場合ははみ出す部分をカットして表示されます。  
+[![Image from Gyazo](https://i.gyazo.com/7b2add52880c7c6609f0c6b86a862619.gif)](https://gyazo.com/7b2add52880c7c6609f0c6b86a862619)  
+マイページには自分の投稿した日記が表示されてフォロー一覧とフォロワー一覧ページにいけます。一覧ページからユーザーアイコンを押すとそのユーザーのマイページへ推移できます。  
+[![Image from Gyazo](https://i.gyazo.com/e5722cbe383b0d8ddf1021481b37aedb.gif)](https://gyazo.com/e5722cbe383b0d8ddf1021481b37aedb)  
+[![Image from Gyazo](https://i.gyazo.com/be922bfb95d148f323d264c1695dc548.gif)](https://gyazo.com/be922bfb95d148f323d264c1695dc548)
+
 
 ## 実装予定の機能
 現在ユーザー検索機能、通報機能を検討中。  

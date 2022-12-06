@@ -341,7 +341,7 @@ a {
   width: 980px;
   height: 800px;
   margin-top: 30px;
-  background-color: lightgoldenrodyellow;
+  background-color: #f6f6f6;
   border-radius: 10px ;
   border: 1px black solid;
   display: flex;
@@ -457,6 +457,12 @@ a {
   padding-top: 20px;
   padding-bottom: 40px;
   background-color: #f6f6f6;
+}
+.topic_main2{
+  min-height: 800px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #fff;
 }
 .topic_inner{
   display: flex;

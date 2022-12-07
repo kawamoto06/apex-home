@@ -47,20 +47,22 @@
           </tr>
         </tbody>
       </table>
-      <% unless @user.id == current_user.id %>
-      <% if @is_room == true %>
-      <%= link_to 'メッセージへ', room_path(@room_id) %>
+      <% if user_signed_in? && @user == current_user %>
+      <%= link_to "DM一覧", rooms_path %>
+      <% end %>
+           <% unless @user.id == current_user.id %>
+      <% if @isRoom == true %>
+        <p class="user-show-room"><a href="/rooms/<%= @roomId %>" class="btn btn-primary btn-lg"> <%= @user.nickname %>さんとのDM</a>
       <% else %>
-      <%= form_for @room do |f| %>
-      <%= fields_for @entry do |e| %>
-        <% e.hidden_field :user_id, value: @user.id %>
-      <%= f.button type: :submit do  %>
-      メッセージを送る
+        <%= form_for @room do |f| %>
+          <%= fields_for @entry do |e| %>
+            <%= e.hidden_field :user_id, value: @user.id %>
+          <% end %>
+          <%= f.submit "DMを送る", class:"btn btn-primary btn-lg user-show-chat"%>
+        
       <% end %>
       <% end %>
-      <% end %>
-      <% end %>
-      <% end %>
+    <% end %>
       <% if user_signed_in? && @user == current_user %>
       <%= link_to "プロフィールの編集", edit_user_path(current_user), method: :get, class: "item-red-btn" %>
       <% end %>

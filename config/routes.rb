@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   end
   
   resources :galleries
+  resources :messages, only: [:create]
+  resources :rooms, only: [:create, :index, :show]
 end

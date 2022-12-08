@@ -5,7 +5,6 @@ class DiariesController < ApplicationController
     @diaries = Diary.order('created_at DESC').limit(10)
     @topics = Topic.includes(:topic_comments).order('topic_comments.created_at' => :desc)
     @topics = @topics.joins(:topic_comments)
-  
   end
   def new
     @diary = Diary.new

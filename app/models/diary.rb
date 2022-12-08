@@ -13,6 +13,12 @@ class Diary < ApplicationRecord
     return image
     end
   end
-
+  def user_profile_or_empty
+    if self.image.attached? == false
+    return "no_image2.png"
+    else
+    return image
+    end
+  end
   
 end

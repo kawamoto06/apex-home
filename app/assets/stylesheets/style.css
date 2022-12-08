@@ -638,6 +638,12 @@ a {
   margin: 0 20px;
   
 }
+.user-image3{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  
+}
 .table2{
   width: 400px;
   height: 800px;

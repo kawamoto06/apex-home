@@ -48,11 +48,11 @@
         </tbody>
       </table>
       <% if user_signed_in? && @user == current_user %>
-      <%= link_to "DM一覧", rooms_path %>
+      <%= link_to "DM一覧", rooms_path, class: "item-red-btn"%>
       <% end %>
            <% unless @user.id == current_user.id %>
       <% if @isRoom == true %>
-        <p class="user-show-room"><a href="/rooms/<%= @roomId %>" class="btn btn-primary btn-lg"> <%= @user.nickname %>さんとのDM</a>
+        <p class="user-show-room"><a href="/rooms/<%= @roomId %>" class="btn btn-primary btn-lg"> DMを見る</a>
       <% else %>
         <%= form_for @room do |f| %>
           <%= fields_for @entry do |e| %>

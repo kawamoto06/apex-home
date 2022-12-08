@@ -1,17 +1,20 @@
-<div class="left-button">
+<div class="topic_main2">
+<div class="chat_text4">参加中のユーザー
 </div>
+<div class="left-button">
+
 
 <% @entries.each do |e| %>
   <div class="user-name">
-  <strong>
+  <div>
     <%= image_tag e.user.user_profile_or_empty, class:"user-image2" %>
       <a class="rooms-user-link" href="/users/<%= e.user.id %>">
         <%= e.user.nickname %>さん
       </a>
-  </strong>
+  </div>
   </div>
 <% end %>
-<hr>
+</div>
 <div class="chats">
   <div class="chat">
     <% if @messages.present? %>
@@ -34,4 +37,5 @@
           <%= f.submit "投稿",class: 'form-submit'%>
     <% end %>
   </div>
+</div>
 </div>

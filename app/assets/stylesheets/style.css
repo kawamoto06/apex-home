@@ -242,6 +242,22 @@ a {
   color: #3b4043;
 
 }
+.chat_text5{
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Rampart One', cursive;
+  width: 260px;
+  color: #3b4043;
+  margin-bottom: 30px;
+}
+.chat_text4{
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Rampart One', cursive;
+  width: 400px;
+  color: #3b4043;
+  margin-left: 550px;
+}
 .chat_text2{
   font-size: 30px;
   text-align: center;
@@ -702,6 +718,40 @@ a {
 .follw_text{
   text-align: center;
 }
+.left-button{
+  display: flex;
+  margin-left: 500px;
+  width: 600px;
+}
+.user-name{
+  border-bottom: #999 1px solid;
+  overflow: hidden;
+  width: 250px;
+}
+.rooms-user-link{
+  overflow: hidden;
+}
+.chats{
+  margin-left: 500px;
+  margin-top: 30px;
+}
+.chat{
+background-color: #7494C0;
+width: 500px;
+height: 600px;
+overflow: scroll;
+}
+.chat-box{
+  display: flex;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+.chat-hukidashi{
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+}
+
 /* DM */
 .dm_list{
   min-height: 600px;

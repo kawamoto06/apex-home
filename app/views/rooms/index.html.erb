@@ -4,7 +4,7 @@
       <%= link_to room_path(room), class: "dm_list__content__link" do %>
         <div class="dm_list__content__link__box">
           <div class="dm_list__content__link__box__name">
-            <%= opponent_user(room) + "さんからのメッセージ" %>
+            <%= opponent_user(room) + "さんとのメッセージ" %>
           </div>
           <p class="dm_list__content__link__box__message">
             <%= most_new_message_preview(room) %>

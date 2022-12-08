@@ -20,7 +20,7 @@
     <% if @messages.present? %>
       <% @messages.each do |m| %>
         <div class="chat-box">
-          <div class="chat-face"><a class="rooms-user-link" href="/users/<%= m.user.id %>">
+          <div class="chat-face">
             <%= image_tag m.user.user_profile_or_empty, class:"user-image2" %>
           </div>
           <div class="chat-hukidashi"> <strong><%= m.body %></strong> <br>

@@ -811,7 +811,9 @@ overflow: scroll;
   font-size: 15px;
   vertical-align: top;
 }
-
+.p-top__paginate{
+  margin-bottom: 50px;
+}
 
 /* フッター */
 

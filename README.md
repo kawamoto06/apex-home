@@ -47,7 +47,7 @@ https://docs.google.com/spreadsheets/d/1bzG783Fndeg1mL2MAqGgXcsDOpU_Ie8lYywkHoHv
 
 
 ## 実装予定の機能
-現在ユーザー検索機能、通報機能を検討中。  
+現在ユーザー検索機能、通報機能、ランキング機能、いいね機能、プロフィール画像のトリミング、トピック検索機能、を検討中。  
 
 ## データベース設計
 [![Image from Gyazo](https://i.gyazo.com/e10553e46bb3a3ab6e466f9d941be3ca.png)](https://gyazo.com/e10553e46bb3a3ab6e466f9d941be3ca)  

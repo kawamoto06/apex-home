@@ -21,9 +21,16 @@ module RoomsHelper
     # 中間テーブルから相手ユーザーのデータを取得
     entry = room.entries.where.not(user_id: current_user)
     # 相手ユーザーの名前を取得
-    name = entry[0].user.nickname
+    name = entry[0].user.user_profile_or_empty
     # 名前を表示
-    tag.image_tag "#{name}", class: "dm_list__content__link__box__name"
+    tag.link_to image_tag (name), class: "user-image4"
+  end
+
+  def original(room)
+    entry = room.entries.where.not(user_id: current_user)
+    # 相手ユーザーの名前を取得
+    name2 = entry[0].user.nickname
+    tag.h "#{name2}", class: "orig"
   end
 
 end

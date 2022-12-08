@@ -644,6 +644,12 @@ a {
   border-radius: 50%;
   
 }
+.user-image4{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  
+}
 .table2{
   width: 400px;
   height: 800px;
@@ -796,8 +802,14 @@ overflow: scroll;
 .dm_list__content__link{
   
 }
-.dm_list__content__link__box__name{
+.dm_list__content__link__box_{
+  display: flex;
 
+}
+.orig{
+  padding-left: 5px;
+  font-size: 15px;
+  vertical-align: top;
 }
 
 

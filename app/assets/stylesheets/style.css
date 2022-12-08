@@ -702,6 +702,34 @@ a {
 .follw_text{
   text-align: center;
 }
+/* DM */
+.dm_list{
+  min-height: 600px;
+  margin-left: 500px;
+  margin-top: 40px;
+  margin-right: 500px;
+  margin-bottom: 30px;
+  border: #999 1px solid;
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+.dm_list__content{
+  width: 100%;
+  display: flex;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-bottom: #999 1px solid;
+  padding-bottom: 10px;
+}
+.dm_list__content__link{
+  
+}
+.dm_list__content__link__box__name{
+
+}
+
+
 /* フッター */
 
 .footer {
@@ -713,6 +741,7 @@ a {
   color: #fff;
   font-size: 10px;
 }
+
 
 /* タブレット対応 */
 @media (max-width: 1024px) {

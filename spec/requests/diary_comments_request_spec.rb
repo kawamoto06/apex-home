@@ -1,5 +1,4 @@
 require 'rails_helper'
 
-RSpec.describe "DiaryComments", type: :request do
-
+RSpec.describe 'DiaryComments', type: :request do
 end

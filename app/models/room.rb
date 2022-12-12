@@ -4,10 +4,8 @@ class Room < ApplicationRecord
   has_many :messages, dependent: :destroy
 
   def user_profile_or_empty
-    if self.image.attached? == false
-    return "no_image2.png"
-    else
-    return image
-    end
+    return 'no_image2.png' if image.attached? == false
+
+    image
   end
 end

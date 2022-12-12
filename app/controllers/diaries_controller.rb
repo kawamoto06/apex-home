@@ -6,6 +6,7 @@ class DiariesController < ApplicationController
     @topics = Topic.includes(:topic_comments).order('topic_comments.created_at' => :desc)
     @topics = @topics.joins(:topic_comments)
   end
+
   def new
     @diary = Diary.new
   end
@@ -44,7 +45,6 @@ class DiariesController < ApplicationController
     redirect_to root_path
   end
 
-
   private
 
   def move_to_signed_in
@@ -54,7 +54,7 @@ class DiariesController < ApplicationController
   end
 
   def diary_params
-    params.require(:diary).permit(:image, :title, :text ).merge(user_id: current_user.id,)
+    params.require(:diary).permit(:image, :title, :text).merge(user_id: current_user.id)
   end
 
   def ensure_user

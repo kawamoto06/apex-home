@@ -4,6 +4,4 @@ class TopicTopicComment
 
   validates :name, presence: true
   validates :topic_comment, presence: true
-
-
 end

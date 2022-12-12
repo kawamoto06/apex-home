@@ -42,7 +42,9 @@ class TopicsController < ApplicationController
   end
 
   private
+
   def topic_params
-    params.require(:topic).permit(:name, topic_comments_attributes: [:topic_comment, :_destroy, :id]).merge(user_id: current_user.id,)
+    params.require(:topic).permit(:name,
+                                  topic_comments_attributes: [:topic_comment, :_destroy, :id]).merge(user_id: current_user.id)
   end
 end

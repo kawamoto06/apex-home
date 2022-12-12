@@ -150,4 +150,40 @@ https://docs.google.com/spreadsheets/d/1bzG783Fndeg1mL2MAqGgXcsDOpU_Ie8lYywkHoHv
 ### Association
 
 - belongs_to :user
+- belongs_to :topic
+
+## rooms テーブル
+
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+
+### Association
+
+- has_many :users through: :entries
+- has_many :entries
+- has_many :messages
+
+## entries テーブル
+
+| Column            | Type       | Options                        |
+| ----------------- | ---------- | ------------------------------ |
+| room              | references | null: false, foreign_key: true |
+| user              | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :room
+
+## messages テーブル
+
+| Column            | Type       | Options                        |
+| ----------------- | ---------- | ------------------------------ |
+| room              | references | null: false, foreign_key: true |
+| user              | references | null: false, foreign_key: true |
+| body              | text       | null: false                    |
+
+### Association
+
+- belongs_to :user
 - belongs_to :room

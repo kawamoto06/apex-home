@@ -52,7 +52,7 @@ https://docs.google.com/spreadsheets/d/1bzG783Fndeg1mL2MAqGgXcsDOpU_Ie8lYywkHoHv
 ## データベース設計
 [![Image from Gyazo](https://i.gyazo.com/ddcfaa7de0462a79e63d437820242feb.png)](https://gyazo.com/ddcfaa7de0462a79e63d437820242feb)  
 ## 画面推移図
-[![Image from Gyazo](https://i.gyazo.com/8cf10625b19e9ef8ddf32e5bb6c5fe20.png)](https://gyazo.com/8cf10625b19e9ef8ddf32e5bb6c5fe20)  
+[![Image from Gyazo](https://i.gyazo.com/279ac47dd6fc425bbb4a3b48d55fd180.png)](https://gyazo.com/279ac47dd6fc425bbb4a3b48d55fd180)  
 ## 開発環境
 ・フロントエンド  
 ・バックエンド  

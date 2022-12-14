@@ -45,7 +45,10 @@ https://docs.google.com/spreadsheets/d/1bzG783Fndeg1mL2MAqGgXcsDOpU_Ie8lYywkHoHv
 [![Image from Gyazo](https://i.gyazo.com/e5722cbe383b0d8ddf1021481b37aedb.gif)](https://gyazo.com/e5722cbe383b0d8ddf1021481b37aedb)  
 [![Image from Gyazo](https://i.gyazo.com/be922bfb95d148f323d264c1695dc548.gif)](https://gyazo.com/be922bfb95d148f323d264c1695dc548)  
 他の人のユーザーページからDMを送るをクリックするとDMが送れます  
-[![Image from Gyazo](https://i.gyazo.com/cc573de331ab8ceb5b5d36c39ef4f4d4.gif)](https://gyazo.com/cc573de331ab8ceb5b5d36c39ef4f4d4)
+[![Image from Gyazo](https://i.gyazo.com/cc573de331ab8ceb5b5d36c39ef4f4d4.gif)](https://gyazo.com/cc573de331ab8ceb5b5d36c39ef4f4d4)  
+マイページからDM一覧を確認できます  
+[![Image from Gyazo](https://i.gyazo.com/1a33997790fb7201137cb585c5774a98.gif)](https://gyazo.com/1a33997790fb7201137cb585c5774a98)  
+
 
 
 ## 実装予定の機能

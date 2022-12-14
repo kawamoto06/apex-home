@@ -43,7 +43,9 @@ https://docs.google.com/spreadsheets/d/1bzG783Fndeg1mL2MAqGgXcsDOpU_Ie8lYywkHoHv
 [![Image from Gyazo](https://i.gyazo.com/7b2add52880c7c6609f0c6b86a862619.gif)](https://gyazo.com/7b2add52880c7c6609f0c6b86a862619)  
 マイページには自分の投稿した日記が表示されてフォロー一覧とフォロワー一覧ページにいけます。一覧ページからユーザーアイコンを押すとそのユーザーのマイページへ推移できます。  
 [![Image from Gyazo](https://i.gyazo.com/e5722cbe383b0d8ddf1021481b37aedb.gif)](https://gyazo.com/e5722cbe383b0d8ddf1021481b37aedb)  
-[![Image from Gyazo](https://i.gyazo.com/be922bfb95d148f323d264c1695dc548.gif)](https://gyazo.com/be922bfb95d148f323d264c1695dc548)
+[![Image from Gyazo](https://i.gyazo.com/be922bfb95d148f323d264c1695dc548.gif)](https://gyazo.com/be922bfb95d148f323d264c1695dc548)  
+他の人のユーザーページからDMを送るをクリックするとDMが送れます  
+[![Image from Gyazo](https://i.gyazo.com/cc573de331ab8ceb5b5d36c39ef4f4d4.gif)](https://gyazo.com/cc573de331ab8ceb5b5d36c39ef4f4d4)
 
 
 ## 実装予定の機能
@@ -156,6 +158,7 @@ https://docs.google.com/spreadsheets/d/1bzG783Fndeg1mL2MAqGgXcsDOpU_Ie8lYywkHoHv
 
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
+| user        | references | null: false, foreign_key: true |
 
 ### Association
 

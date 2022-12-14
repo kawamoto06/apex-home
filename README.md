@@ -50,7 +50,7 @@ https://docs.google.com/spreadsheets/d/1bzG783Fndeg1mL2MAqGgXcsDOpU_Ie8lYywkHoHv
 現在ユーザー検索機能、通報機能、ランキング機能、いいね機能、プロフィール画像のトリミング、トピック検索機能、を検討中。  
 
 ## データベース設計
-[![Image from Gyazo](https://i.gyazo.com/e10553e46bb3a3ab6e466f9d941be3ca.png)](https://gyazo.com/e10553e46bb3a3ab6e466f9d941be3ca)  
+[![Image from Gyazo](https://i.gyazo.com/ddcfaa7de0462a79e63d437820242feb.png)](https://gyazo.com/ddcfaa7de0462a79e63d437820242feb)  
 ## 画面推移図
 [![Image from Gyazo](https://i.gyazo.com/8cf10625b19e9ef8ddf32e5bb6c5fe20.png)](https://gyazo.com/8cf10625b19e9ef8ddf32e5bb6c5fe20)  
 ## 開発環境

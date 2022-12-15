@@ -781,7 +781,7 @@ overflow: scroll;
 
 /* DM */
 .dm_list{
-  min-height: 600px;
+  height: 800px;
   margin-left: 500px;
   margin-top: 40px;
   margin-right: 500px;

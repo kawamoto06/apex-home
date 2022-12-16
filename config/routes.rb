@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   
   resources :galleries
   resources :messages, only: [:create]
-  resources :rooms, only: [:create, :index, :show, :destory]
+  resources :rooms, only: [:create, :index, :show, :destroy]
 end

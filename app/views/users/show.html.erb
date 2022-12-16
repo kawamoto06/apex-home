@@ -4,6 +4,7 @@
       <h2 class="page-heading">
         <%= @user.nickname %>
       </h2>
+      閲覧者<%= @user.impressions_count %>人
       <div class="follow_box">
       <div class="follow">
       <%= link_to "フォロー", user_followings_path(@user.id) %>

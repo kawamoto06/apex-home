@@ -20,7 +20,8 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true
   is_impressionable counter_cache: true
-
+  
+  
 
   def follow(user_id)
     relationships.create(followed_id: user_id)
@@ -41,4 +42,5 @@ class User < ApplicationRecord
 
     image
   end
+  
 end

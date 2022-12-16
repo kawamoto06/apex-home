@@ -3,10 +3,11 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
 
   def index
-    redirect_to user_path(current_user)
+    @users = User.order(impressions_count: 'DESC')
   end
 
   def show
+    impressionist(@user, nil, unique: [:ip_address])
     @diaries = @user.diaries.order('created_at DESC')
     @currentUserEntry = Entry.where(user_id: current_user.id)
     @userEntry = Entry.where(user_id: @user.id)

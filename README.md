@@ -48,6 +48,7 @@ https://docs.google.com/spreadsheets/d/1bzG783Fndeg1mL2MAqGgXcsDOpU_Ie8lYywkHoHv
 [![Image from Gyazo](https://i.gyazo.com/cc573de331ab8ceb5b5d36c39ef4f4d4.gif)](https://gyazo.com/cc573de331ab8ceb5b5d36c39ef4f4d4)  
 マイページからDM一覧を確認できます  
 [![Image from Gyazo](https://i.gyazo.com/1a33997790fb7201137cb585c5774a98.gif)](https://gyazo.com/1a33997790fb7201137cb585c5774a98)  
+ログイン中の本人のみマイページにアクセス数が表示されます  
 
 
 

@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   get 'relationships/followings'
   get 'relationships/followers'
-  devise_for :users
   root to: 'diaries#index'
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
+  
   resources :diaries do
     resources :diary_comments, only: [:create, :edit, :update, :destroy] 
   end

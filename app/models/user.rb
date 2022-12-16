@@ -19,6 +19,9 @@ class User < ApplicationRecord
   has_many :rooms, through: :entries
 
   validates :nickname, presence: true
+  is_impressionable counter_cache: true
+  
+  
 
   def follow(user_id)
     relationships.create(followed_id: user_id)
@@ -39,4 +42,5 @@ class User < ApplicationRecord
 
     image
   end
+  
 end

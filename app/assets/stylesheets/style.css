@@ -305,6 +305,10 @@ a {
   height: 120px;
 }
 
+.main_center2{
+  height: 320px;
+}
+
 .main_botton{
   height: 600px;
 }
@@ -316,7 +320,7 @@ a {
 .main_botton2{
   position: absolute;
   left: 0px;
-  top: 960px;
+  top: 1280px;
   width: 100%;
 }
 

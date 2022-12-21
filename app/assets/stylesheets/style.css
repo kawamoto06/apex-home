@@ -325,23 +325,33 @@ a {
   font-family: 'Rampart One', cursive;
   width: 100%;
   border-radius: 30px;
+  margin-bottom: 20px;
 }
 .rank{
   display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 .ranking{
   width: 200px;
   height: 200px;
-  margin-left: 200px;
   background-color: #f5f5f5;
 }
 .ranking2{
   background-color: #f5f5f5;
   width: 200px;
-  margin-left: 200px;
+  
   text-align: center;
 }
-
+.ranking3{
+  display: flex;
+  justify-content: space-around;
+}
+.r1{
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Rampart One', cursive;
+}
 
 .main_botton{
   height: 600px;

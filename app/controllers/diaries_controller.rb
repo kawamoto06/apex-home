@@ -2,6 +2,7 @@ class DiariesController < ApplicationController
   before_action :move_to_signed_in, except: [:index, :show]
   before_action :ensure_user, only: [:edit]
   def index
+    @users = User.order(impressions_count: 'DESC').limit(3)
     @diaries = Diary.order('created_at DESC').limit(10)
     @topics = Topic.includes(:topic_comments).order('topic_comments.created_at' => :desc)
     @topics = @topics.joins(:topic_comments)

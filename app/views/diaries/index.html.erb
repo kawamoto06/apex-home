@@ -44,6 +44,24 @@
 </div>
 <div class="main_center2">
   <%= image_tag "背景2.jpeg", class:"image2" %>
+  <div class="center">
+    <div class="center2">
+      <div class="center3">PV数ランキング
+       </div>
+      <div class="rank">
+        <% @users.each do |user| %>
+        <%= link_to user_path(user.id) do %>
+        <div class="ranking">
+        <%= image_tag user.user_profile_or_empty, class: 'diary-image' %>
+      </div>
+      <div class="ranking2">
+      <%= user.nickname %>
+
+      </div>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
 <div class="main_botton">
   <div class="main_botton2">

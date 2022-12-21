@@ -306,8 +306,42 @@ a {
 }
 
 .main_center2{
-  height: 320px;
+  height: 420px;
 }
+.center{
+  position: absolute;
+  left: 0;
+  top: 980px;
+  width: 100%;
+}
+.center2{
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+.center3{
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Rampart One', cursive;
+  width: 100%;
+  border-radius: 30px;
+}
+.rank{
+  display: flex;
+}
+.ranking{
+  width: 200px;
+  height: 200px;
+  margin-left: 200px;
+  background-color: #f5f5f5;
+}
+.ranking2{
+  background-color: #f5f5f5;
+  width: 200px;
+  margin-left: 200px;
+  text-align: center;
+}
+
 
 .main_botton{
   height: 600px;
@@ -320,7 +354,7 @@ a {
 .main_botton2{
   position: absolute;
   left: 0px;
-  top: 1280px;
+  top: 1380px;
   width: 100%;
 }
 

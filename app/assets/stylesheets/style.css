@@ -840,7 +840,7 @@ overflow: scroll;
 
 .dm_list__content{
   width: 100%;
-  display: flex;
+
   padding-left: 10px;
   padding-top: 10px;
   border-bottom: #999 1px solid;
@@ -849,17 +849,23 @@ overflow: scroll;
 .dm_list__content__link{
   
 }
-.dm_list__content__link__box_{
+.dm_list__content__link__box{
   display: flex;
+  justify-content: space-between;
 
 }
 .dm_list__content__link__box__name{
-  width: 340px;
+  
   overflow: hidden;
+}
+.dm_list__content__link__box__message{
+  
+  margin-left: 1px;
 }
 
 .dm_d{
-  
+  margin-right: 20px;
+  margin-top: 10px;
 }
 .orig{
   padding-left: 5px;

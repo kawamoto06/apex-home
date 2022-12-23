@@ -53,19 +53,19 @@
         <%= link_to user_path(user.id) do %>
         <div class="ranking">
         <%= image_tag user.user_profile_or_empty, class: 'diary-image' %>
-      </div>
-      <div class="ranking2">
-      <%= user.nickname %>
-      </div>
-      <div class="r1"><%= i%>位
-      </div>
+        </div>
+        <div class="ranking2">
+        <%= user.nickname %>
+        </div>
+        <div class="r1"><%= i%>位
+        </div>
       
       <% end %>
       <% end %>
-      
+      </div>
     </div>
   </div>
- 
+<div>
       
 <div class="main_center">
   <%= image_tag "背景.jpeg", class:"image2" %>

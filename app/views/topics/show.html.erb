@@ -12,10 +12,10 @@
         <%# // ログインしているユーザーには上記を表示する %>
         <div class="comments_lists">
           <%# 投稿に紐づくコメントを一覧する処理を記述する %>
-          <% @topic_comments.each do |comment| %>
+          <% @topic_comments.each.with_index(1) do |comment, i| %>
             <div class="topic_comments_list">
               <div class="user_name">
-                名前.
+                <%= i %>.
                 <%= link_to comment.user.nickname, "/users/#{comment.user.id}", class: :comment_user %>
               </div>
               <div class="comments">

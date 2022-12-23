@@ -49,7 +49,7 @@
       <div class="center3">PV数ランキング
        </div>
       <div class="rank">
-        <% @users.each do |user| %>
+        <% @users.each.with_index(1) do |user, i| %>
         <%= link_to user_path(user.id) do %>
         <div class="ranking">
         <%= image_tag user.user_profile_or_empty, class: 'diary-image' %>
@@ -57,21 +57,16 @@
       <div class="ranking2">
       <%= user.nickname %>
       </div>
+      <div class="r1"><%= i%>位
+      </div>
       
       <% end %>
       <% end %>
       
     </div>
   </div>
-  <div class="ranking3">
-      <div class="r1">1位
-      </div>
-      <div class="r2">2位
-      </div>
-      <div class="r3">3位
-      </div>
-      </div>
-</div>
+ 
+      
 <div class="main_center">
   <%= image_tag "背景.jpeg", class:"image2" %>
 </div>

@@ -341,29 +341,15 @@ a {
   
   text-align: center;
 }
-.ranking3{
-  display: flex;
-  justify-content: space-around;
-}
+
 .r1{
   font-size: 40px;
   text-align: center;
   font-family: 'Rampart One', cursive;
-  margin-top: 20px;
+  margin-top: 10px;
 
 }
-.r2{
-  font-size: 40px;
-  text-align: center;
-  font-family: 'Rampart One', cursive;
-  margin-top: 20px;
-}
-.r3{
-  font-size: 40px;
-  text-align: center;
-  font-family: 'Rampart One', cursive;
-  margin-top: 20px;
-}
+
 
 .main_botton{
   height: 600px;
@@ -376,7 +362,7 @@ a {
 .main_botton2{
   position: absolute;
   left: 0px;
-  top: 1500px;
+  top: 500px;
   width: 100%;
 }
 
